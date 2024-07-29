@@ -67,15 +67,12 @@
   body {
     @apply bg-background text-foreground;
   }
-
 }
 
 @layer components {
-  
 }
 
 @layer utilities {
-  
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -85,9 +82,22 @@
     scrollbar-width: none;
   }
 
-  .hero{
-    background: url('/images/hero.png') no-repeat center center;
+  .hero {
+    background: url("/images/hero.png") no-repeat center center;
     background-size: cover;
   }
 
+  .hero-text {
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .bg-glassmorphic {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .hero-card {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
 }

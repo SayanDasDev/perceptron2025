@@ -23,7 +23,7 @@ const HeroCardLeft = () => {
         (RKMVERI)
       </p>
       <p
-        className={`${font.className} text-[clamp(6px,3vw,16px)] pt-1 leading-snug font-thin text-gray-50`}
+        className={`${font.className} text-[clamp(6px,3vw,16px)] pt-1 leading-snug font-extralight text-gray-50`}
       >
         (Deemed-to-be-University as declared by Govt. of India under Section 3
         of UGC Act, 1956)

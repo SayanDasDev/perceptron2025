@@ -12,9 +12,9 @@ const HeroTitle = () => {
         The techfest at RKMVERI
       </p>
       <p
-        className={`${font_main.className} hero-text text-[clamp(36px,8vw,96px)] text-gray-50 font-extrabold whitespace-nowrap`}
+        className={`${font_main.className} hero-text text-[clamp(36px,8vw,96px)] text-gray-50 font-extrabold leading-snug`}
       >
-        PERCEPTRON 3.0
+        PERCEPTRON 2025
       </p>
     </div>
   );

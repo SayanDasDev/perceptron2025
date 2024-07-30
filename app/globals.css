@@ -100,4 +100,41 @@
   .hero-card {
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
+
+  .hero-cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "cta"
+      "left"
+      "right";
+  }
+
+  @media (min-width: 800px) {
+    .hero-cards-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        "cta cta"
+        "left right";
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .hero-cards-grid {
+      grid-template-columns: 500px 1fr 500px;
+      grid-template-areas: 
+        "left cta right";
+    }
+  }
+
+  .hero-card-left {
+    grid-area: left;
+  }
+
+  .hero-card-right {
+    grid-area: right;
+  }
+
+  .hero-card-cta {
+    grid-area: cta;
+  }
 }

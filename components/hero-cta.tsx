@@ -5,9 +5,9 @@ const font_sub = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
 
 const HeroCTA = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="hero-cta flex flex-col-reverse xl:flex-col gap-6 items-center justify-center">
       <Button
-        className={`${font_sub.className} translate-y-[-180%]`}
+        className={`${font_sub.className} xl:translate-y-[-150%]`}
         variant={"heroCTA"}
         size={"xl"}
       >

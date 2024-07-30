@@ -5,7 +5,7 @@ const font_sub_cap = Bruno_Ace_SC({ subsets: ["latin"], weight: ["400"] });
 
 const HeroCardLeft = () => {
   return (
-      <div className="hero-card-left bg-glassmorphic hero-card flex flex-col justify-center !border-b-0 !border-l-0 rounded-tr-3xl text-center px-4">
+      <div className="hero-card-left xl:h-[280px] bg-glassmorphic hero-card flex flex-col justify-center !border-b-0 max-xl:!border-r-0 !border-l-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none xl:rounded-tl-none xl:rounded-tr-3xl text-center px-4">
         <p
           className={`${font_sub.className} text-[clamp(6px,3vw,16px)] text-gray-400 font-extrabold`}
         >

@@ -102,16 +102,17 @@
   }
 
   .hero-cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
     grid-template-areas: 
       "cta"
       "left"
       "right";
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     .hero-cards-grid {
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1.5fr 1fr;
       grid-template-areas: 
         "cta cta"
         "left right";
@@ -136,5 +137,28 @@
 
   .hero-card-cta {
     grid-area: cta;
+  }
+
+  .hero-title-grid {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+      "logo-left logo-right"
+      "text text";
+  }
+
+  .hero-title-logo-left {
+    grid-area: logo-left;
+  }
+
+  .hero-title-logo-right {
+    grid-area: logo-right;
+  }
+
+  .hero-title-text {
+    grid-area: text;
   }
 }

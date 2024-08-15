@@ -20,18 +20,19 @@ export default function Home() {
 
   const container = useRef<HTMLDivElement | null>(null);
   const eventsContainer = useRef<HTMLDivElement | null>(null);
-
+  
   useGSAP(() => {
     gsap.to('.event', {
-      transform: 'translateX(-200%)',
+      transform: 'translateX(-1100%)',
       scrollTrigger: {
         trigger: eventsContainer.current,
         scroller: 'body',
         scrub: 2,
+        // snap: 1 / 12,
         markers: true,  
         pin: true,
         start: 'top 0%',
-        end: 'top -200%',
+        end: 'top -1200%',
       },
     })
     
@@ -56,7 +57,7 @@ export default function Home() {
       <section id="about"  className="about w-screen h-screen flex items-center justify-center text-9xl bg-gray-700 text-white">
         about
       </section>
-      <section ref={eventsContainer} id="events" className="flex w-[300%]">
+      <section ref={eventsContainer} id="events" className="flex w-[1200%]">
         <Events />
       </section>
       <section id="schedule" className="about w-screen h-screen text-9xl">

@@ -7,11 +7,8 @@ import HeroTitle from "@/components/hero-title";
 import { Logos } from "@/components/logos";
 import NavMenu from "@/components/nav-menu";
 import Navbar from "@/components/navbar";
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 

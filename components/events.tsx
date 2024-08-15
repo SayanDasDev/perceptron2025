@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useGSAP } from "@gsap/react";
+import EventsContents from "./events-contents";
 
 const Events = () => {
   const container = useRef<HTMLDivElement | null>(null);
@@ -45,33 +46,7 @@ const Events = () => {
     <>
       <section id="events" className="flex">
         <div ref={container} className="flex flex-nowrap w-[900%]">
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-red-200">
-            Event 1
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-cyan-200">
-            Event 2
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-amber-200">
-            Event 3
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-red-200">
-            Event 4
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-cyan-200">
-            Event 5
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-amber-200">
-            Event 6
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-red-200">
-            Event 7
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-cyan-200">
-            Event 8
-          </div>
-          <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-amber-200">
-            Event 9
-          </div>
+          <EventsContents />
         </div>
       </section>
       {/* Dummy sections added for each 100% offset in the end*/}

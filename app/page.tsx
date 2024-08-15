@@ -1,5 +1,6 @@
 "use client";
 import Events from "@/components/events";
+import EventsContents from "@/components/events-contents";
 import HeroCardLeft from "@/components/hero-card-left";
 import HeroCardRight from "@/components/hero-card-right";
 import HeroCTA from "@/components/hero-cta";
@@ -40,7 +41,12 @@ export default function Home() {
         about
       </section>
 
-      <Events />
+      <div className="max-md:hidden">
+        <Events />
+      </div>
+      <div className="md:hidden flex-col flex-nowrap">
+        <EventsContents />
+      </div>
 
       <section className="about w-screen h-screen bg-pink-200 text-9xl">
         Schedule

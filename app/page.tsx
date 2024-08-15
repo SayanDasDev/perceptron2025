@@ -17,29 +17,11 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-
-  const container = useRef<HTMLDivElement | null>(null);
-  const eventsContainer = useRef<HTMLDivElement | null>(null);
   
-  useGSAP(() => {
-    gsap.to('.event', {
-      transform: 'translateX(-1100%)',
-      scrollTrigger: {
-        trigger: eventsContainer.current,
-        scroller: 'body',
-        scrub: 2,
-        // snap: 1 / 12,
-        markers: true,  
-        pin: true,
-        start: 'top 0%',
-        end: 'top -1200%',
-      },
-    })
-    
-  }, []);
 
   return (
     <main className="no-scrollbar overflow-x-hidden">
+      <NavMenu />
       <section id="hero" className="hero w-screen h-screen grid grid-rows-[80px_25dvh_1fr] md:grid-rows-[80px_30dvh_1fr] xl:grid-rows-[80px_1fr_280px]">
         <Navbar />
         <div className="text-gray-50 h-4 xl:hidden ml-auto mr-6 my-6" />
@@ -57,16 +39,21 @@ export default function Home() {
       <section id="about"  className="about w-screen h-screen flex items-center justify-center text-9xl bg-gray-700 text-white">
         about
       </section>
-      <section ref={eventsContainer} id="events" className="flex w-[1200%]">
+      <section id="events" className="flex">
         <Events />
       </section>
-      <section id="schedule" className="about w-screen h-screen text-9xl">
+      {/* Dummy sections added for each 100% offset set in Events */}
+      <section className="about w-screen h-screen" />
+      <section className="about w-screen h-screen" />
+      <section className="about w-screen h-screen" />
+
+      
+      <section className="about w-screen h-screen bg-pink-200 text-9xl">
         Schedule
       </section>
-      <section id="gallery" className="about w-screen h-screen text-9xl">
+      <section id="gallery" className="about w-screen h-screen bg-green-200 text-9xl">
         gallery
       </section>
-      <NavMenu />
     </main>
   );
 }

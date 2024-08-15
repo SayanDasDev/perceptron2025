@@ -18,7 +18,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Event",
-      href: "#event",
+      href: "#events",
       items: [
         {
           title: "Stragtegem",

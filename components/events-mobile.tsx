@@ -27,10 +27,11 @@ const EventsMobile = () => {
         scrollTrigger: {
           trigger: container.current,
           pin: true,
-          scrub: 1,
+          scrub: 0.25,
           snap: {
             snapTo: 1 / (events.length - 1),
-            duration: 0.05,
+            duration: 0.005,
+            delay: 0.001,
           },
           // base vertical scrolling on how wide the container is so it feels more natural.
           end: "bottom bottom",

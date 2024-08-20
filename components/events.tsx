@@ -27,10 +27,11 @@ const Events = () => {
         scrollTrigger: {
           trigger: container.current,
           pin: true,
-          scrub: 1,
+          scrub: 0.4,
           snap: {
             snapTo: 1 / (events.length - 1),
-            duration: 0.05,
+            duration: 0.005,
+            delay: 0.01,
           },
           // base vertical scrolling on how wide the container is so it feels more natural.
           end: "500%",

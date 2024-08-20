@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import EventsContents from "./events-contents";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 
-const Events = () => {
+const EventsMobile = () => {
   const container = useRef<HTMLDivElement | null>(null);
 
   const [isMounted, setIsMounted] = useState(false);
@@ -23,7 +23,7 @@ const Events = () => {
       let events = gsap.utils.toArray(".event");
 
       gsap.to(".event", {
-        xPercent: -100 * (events.length - 1),
+        yPercent: -100 * (events.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: container.current,
@@ -34,7 +34,7 @@ const Events = () => {
             duration: 0.05,
           },
           // base vertical scrolling on how wide the container is so it feels more natural.
-          end: "500%",
+          end: "bottom bottom",
         },
       });
     },
@@ -43,15 +43,13 @@ const Events = () => {
 
   return (
     <>
-      <section id="events" className="flex">
-        <div ref={container} className="flex flex-nowrap w-[900%]">
+      <section id="events" className="flex overflow-clip">
+        <div ref={container} className="flex-col flex-nowrap w-[900%]">
           <EventsContents />
         </div>
       </section>
-      {/* Dummy 100vh spacers added for each 100% offset in the end*/}
-      <div className="w-screen h-[500vh]" />
     </>
   );
 };
 
-export default Events;
+export default EventsMobile;

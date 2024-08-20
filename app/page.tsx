@@ -1,6 +1,7 @@
 "use client";
 import Events from "@/components/events";
 import EventsContents from "@/components/events-contents";
+import EventsMobile from "@/components/events-mobile";
 import HeroCardLeft from "@/components/hero-card-left";
 import HeroCardRight from "@/components/hero-card-right";
 import HeroCTA from "@/components/hero-cta";
@@ -49,7 +50,7 @@ export default function Home() {
       </div>
       {/* for mobile */}
       <div className="md:hidden flex-col flex-nowrap">
-        <EventsContents />
+        <EventsMobile />
       </div>
 
         <Section />

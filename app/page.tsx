@@ -1,6 +1,5 @@
 "use client";
 import Events from "@/components/events";
-import EventsContents from "@/components/events-contents";
 import EventsMobile from "@/components/events-mobile";
 import HeroCardLeft from "@/components/hero-card-left";
 import HeroCardRight from "@/components/hero-card-right";
@@ -9,7 +8,7 @@ import HeroTitle from "@/components/hero-title";
 import { Logos } from "@/components/logos";
 import NavMenu from "@/components/nav-menu";
 import Navbar from "@/components/navbar";
-import Section from "@/components/Section";
+import Schedule from "@/components/schedule";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -53,7 +52,7 @@ export default function Home() {
         <EventsMobile />
       </div>
 
-        <Section />
+      <Schedule />
       <section
         id="gallery"
         className="w-screen h-screen bg-green-200 text-9xl"

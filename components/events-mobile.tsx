@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import EventsContents from "./events-contents";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const EventsMobile = () => {
   const container = useRef<HTMLDivElement | null>(null);

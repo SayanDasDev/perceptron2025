@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
 
-const Section = () => {
+const Schedule = () => {
 
   useGSAP(()=>{
     ScrollTrigger.create({
@@ -39,4 +39,4 @@ const Section = () => {
   )
 }
 
-export default Section
+export default Schedule

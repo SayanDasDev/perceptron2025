@@ -20,18 +20,18 @@ const Section = () => {
   return (
     <section className="schedule w-screen overflow-y-clip bg-pink-200 text-9xl flex">
       <div className="left w-1/2">
-      <div className='border-cyan-800 border h-dvh'>
+      <div className='h-dvh'>
           1st
         </div>
-      <div className='border-amber-800 border h-dvh'>
+      <div className='h-dvh'>
           2nd
         </div>
-      <div className='border-fuchsia-800 border h-dvh'>
+      <div className='h-dvh'>
           Third
         </div>
       </div>
       <div className="right w-1/2">
-        <div className='border-rose-800 border h-dvh'>
+        <div className='h-dvh'>
           Event
         </div>
       </div>

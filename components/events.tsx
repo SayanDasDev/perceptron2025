@@ -47,12 +47,8 @@ const Events = () => {
           <EventsContents />
         </div>
       </section>
-      {/* Dummy sections added for each 100% offset in the end*/}
-      <section className="about w-screen h-screen" />
-      <section className="about w-screen h-screen" />
-      <section className="about w-screen h-screen" />
-      <section className="about w-screen h-screen" />
-      <section className="about w-screen h-screen" />
+      {/* Dummy 100vh spacers added for each 100% offset in the end*/}
+      <div className="w-screen h-[500vh]" />
     </>
   );
 };

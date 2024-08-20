@@ -1,10 +1,8 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useGSAP } from "@gsap/react";
 import EventsContents from "./events-contents";
 
@@ -35,7 +33,7 @@ const Events = () => {
             duration: 0.05,
           },
           // base vertical scrolling on how wide the container is so it feels more natural.
-          end: "300%",
+          end: "500%",
         },
       });
     },
@@ -50,6 +48,8 @@ const Events = () => {
         </div>
       </section>
       {/* Dummy sections added for each 100% offset in the end*/}
+      <section className="about w-screen h-screen" />
+      <section className="about w-screen h-screen" />
       <section className="about w-screen h-screen" />
       <section className="about w-screen h-screen" />
       <section className="about w-screen h-screen" />

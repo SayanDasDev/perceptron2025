@@ -8,6 +8,7 @@ import HeroTitle from "@/components/hero-title";
 import { Logos } from "@/components/logos";
 import NavMenu from "@/components/nav-menu";
 import Navbar from "@/components/navbar";
+import Section from "@/components/Section";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -15,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
-    <main className="no-scrollbar overflow-x-hidden">
+    <main className="overflow-x-hidden">
       <NavMenu />
       <section
         id="hero"
@@ -41,19 +42,20 @@ export default function Home() {
         about
       </section>
 
+      {/* Events Section */}
+      {/* for pc */}
       <div className="max-md:hidden">
         <Events />
       </div>
+      {/* for mobile */}
       <div className="md:hidden flex-col flex-nowrap">
         <EventsContents />
       </div>
 
-      <section className="about w-screen h-screen bg-pink-200 text-9xl">
-        Schedule
-      </section>
+        <Section />
       <section
         id="gallery"
-        className="about w-screen h-screen bg-green-200 text-9xl"
+        className="w-screen h-screen bg-green-200 text-9xl"
       >
         gallery
       </section>

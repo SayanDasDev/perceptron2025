@@ -5,15 +5,19 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import EventsContents from "./events-contents";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const Events = () => {
   const container = useRef<HTMLDivElement | null>(null);
 
   const [isMounted, setIsMounted] = useState(false);
 
+  const { width } = useWindowDimensions();
+
   useEffect(() => {
     setIsMounted(true);
-  }, []);
+    console.log(width);
+  }, [width]);
 
   useGSAP(
     () => {

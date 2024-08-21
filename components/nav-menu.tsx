@@ -2,18 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
-import { Bruno_Ace, Bruno_Ace_SC } from "next/font/google";
 import { docsConfig } from "@/config/docs";
 import Link from "next/link";
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import "@/styles/menu.css"
-
-
-const font_sub = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
-const font_sub_cap = Bruno_Ace_SC({ subsets: ["latin"], weight: ["400"] });
+import useFonts from "@/hooks/useFonts";
 
 const NavMenu = () => {
+
+  const {font_sub} = useFonts();
 
   const container = useRef<HTMLDivElement | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

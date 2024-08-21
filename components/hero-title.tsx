@@ -1,9 +1,10 @@
+import useFonts from "@/hooks/useFonts";
 import React from "react";
-import { Bruno_Ace_SC, Bungee } from "next/font/google";
-const font_main = Bungee({ subsets: ["latin"], weight: ["400"] });
-const font_sub_cap = Bruno_Ace_SC({ subsets: ["latin"], weight: ["400"] });
 
 const HeroTitle = () => {
+
+  const { font_sub_cap, font_main } = useFonts();
+
   return (
     <div className="hero-title-text flex flex-col text-center">
       <p

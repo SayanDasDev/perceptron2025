@@ -1,4 +1,5 @@
 "use client";
+import About from "@/components/about";
 import Events from "@/components/events";
 import EventsMobile from "@/components/events-mobile";
 import HeroCardLeft from "@/components/hero-card-left";
@@ -37,9 +38,9 @@ export default function Home() {
       </section>
       <section
         id="about"
-        className="about w-screen h-screen flex items-center justify-center text-9xl bg-gray-700 text-white"
+        className="about w-screen px-12 border-subtle !border-b-0 !border-r-0 !border-l-0 h-screen flex items-center justify-center text-9xl bg-gradient-to-b from-black to-slate-900 text-white"
       >
-        about
+        <About />
       </section>
 
       {/* Events Section */}

@@ -1,11 +1,12 @@
 import React from "react";
 import { docsConfig } from "@/config/docs";
-import { Bruno_Ace } from "next/font/google";
 import Link from "next/link";
-const font_sub = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
-
+import useFonts from "@/hooks/useFonts";
 
 const Navbar = () => {
+
+  const { font_sub } = useFonts()
+
   return (
     <nav className="max-xl:hidden">
       <ul className={`${font_sub.className} flex justify-around px-32 py-8 text-gray-50 text-lg`}>

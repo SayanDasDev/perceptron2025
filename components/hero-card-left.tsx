@@ -1,11 +1,12 @@
-import { Bruno_Ace, Bruno_Ace_SC, DM_Sans } from "next/font/google";
-const font_sub = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
-const font_sub_cap = Bruno_Ace_SC({ subsets: ["latin"], weight: ["400"] });
-const font = DM_Sans({ subsets: ["latin"] });
+import useFonts from "@/hooks/useFonts";
+
 
 const HeroCardLeft = () => {
+
+  const {font_sub_cap, font_sub, font} = useFonts()
+
   return (
-      <div className="hero-card-left xl:h-[280px] bg-glassmorphic hero-card flex flex-col justify-center !border-b-0 max-xl:!border-r-0 !border-l-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none xl:rounded-tl-none xl:rounded-tr-3xl text-center px-4">
+      <div className="hero-card-left xl:h-[280px] bg-glassmorphic border-subtle flex flex-col justify-center !border-b-0 max-xl:!border-r-0 !border-l-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none xl:rounded-tl-none xl:rounded-tr-3xl text-center px-4">
         <p
         className={`${font_sub.className} text-[clamp(6px,3vw,16px)] text-gray-400 font-extrabold`}
       >

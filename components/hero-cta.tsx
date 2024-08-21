@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
+import useFonts from "@/hooks/useFonts";
 import { Play } from "lucide-react";
-import { Bruno_Ace } from "next/font/google";
-const font_sub = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
 
 const HeroCTA = () => {
+
+  const {font_sub} = useFonts();
+
   return (
     <div className="hero-cta flex flex-col-reverse col-span-1 md:col-span-2 xl:col-span-1 xl:flex-col gap-6 items-center justify-center">
       <Button

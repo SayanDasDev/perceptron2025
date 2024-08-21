@@ -177,4 +177,9 @@
   .hero-title-text {
     grid-area: text;
   }
+
+  .text-vertical{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 }

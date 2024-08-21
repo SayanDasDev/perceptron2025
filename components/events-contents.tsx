@@ -1,5 +1,7 @@
 import React from "react";
 import EventTitleSection from "./event-title-section";
+import EventCard from "./event-card";
+import { eventsData } from "@/config/events";
 
 const EventsContents = () => {
   return (
@@ -7,12 +9,12 @@ const EventsContents = () => {
       <div className="event h-screen w-screen flex items-center justify-center text-8xl overflow-clip bg-gradient-to-b from-slate-900 to-slate-950 text-white">
         <EventTitleSection />
       </div>
-      {Array.from({ length: 8 }).map((_, i) => (
+      {eventsData.map((_, i) => (
         <div
           key={i}
           className="event h-screen w-screen flex items-center justify-center text-8xl bg-gradient-to-b from-slate-900 to-slate-950 text-white"
         >
-          Event {i + 1}
+          <EventCard item={eventsData[i]} eventNumber={i}/>
         </div>
       ))}
     </>

@@ -1,35 +1,20 @@
 import React from "react";
+import EventTitleSection from "./event-title-section";
 
 const EventsContents = () => {
   return (
     <>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 1
+      <div className="event h-screen w-screen flex items-center justify-center text-8xl overflow-clip bg-gradient-to-b from-slate-900 to-slate-950 text-white">
+        <EventTitleSection />
       </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 2
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 3
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 4
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 5
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 6
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 7
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 8
-      </div>
-      <div className="event h-screen w-screen flex items-center justify-center text-8xl bg-green-200">
-        Event 9
-      </div>
+      {Array.from({ length: 8 }).map((_, i) => (
+        <div
+          key={i}
+          className="event h-screen w-screen flex items-center justify-center text-8xl bg-gradient-to-b from-slate-900 to-slate-950 text-white"
+        >
+          Event {i + 1}
+        </div>
+      ))}
     </>
   );
 };

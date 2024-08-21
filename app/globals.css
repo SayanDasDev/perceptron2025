@@ -82,6 +82,22 @@
     scrollbar-width: none;
   }
 
+  .font-size-lg{
+    @apply text-[clamp(36px,8vw,96px)];
+  }
+
+  .font-size-md{
+    @apply text-[clamp(24px,6vw,48px)];
+  }
+
+  .font-size-sm{
+    @apply text-[clamp(16px,4vw,24px)];
+  }
+
+  .font-size-xs{
+    @apply text-[clamp(6px,3vw,16px)];
+  }
+
   .hero {
     background: url("/images/hero.png") no-repeat center center;
     background-size: cover;

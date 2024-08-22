@@ -5,6 +5,7 @@ export interface EventItem {
   date: string
   time: string
   rules: EventRuleItem[]
+  prize: EventPrizeItem
 }
 
 export interface EventRuleItem {
@@ -13,6 +14,8 @@ export interface EventRuleItem {
 }
 
 export interface EventPrizeItem {
-  title: string
-  description?: string
+  first: string
+  second: string
+  third: string
+  extra?: string
 }

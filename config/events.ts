@@ -18,6 +18,12 @@ export const eventsData: EventItem[] = [
         title: "Presentation Skills",
       },
     ],
+    prize: {
+      first: "₹ 10K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "Hack-a-thon",
@@ -39,6 +45,12 @@ export const eventsData: EventItem[] = [
         title: "Demonstration of working prototype",
       },
     ],
+    prize: {
+      first: "₹ 8K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "Tech Talks",
@@ -57,6 +69,12 @@ export const eventsData: EventItem[] = [
         title: "Dress code: business casual",
       },
     ],
+    prize: {
+      first: "₹ 9K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "Robotic Challenge",
@@ -81,6 +99,12 @@ export const eventsData: EventItem[] = [
         title: "Safety protocols",
       },
     ],
+    prize: {
+      first: "₹ 15K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "Ideathon",
@@ -99,6 +123,12 @@ export const eventsData: EventItem[] = [
         title: "Clearly defined problem statement",
       },
     ],
+    prize: {
+      first: "₹ 12K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "AI/ML Workshop",
@@ -117,6 +147,12 @@ export const eventsData: EventItem[] = [
         title: "Bring your own laptop",
       },
     ],
+    prize: {
+      first: "₹ 10K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "Poster Presentation",
@@ -141,6 +177,12 @@ export const eventsData: EventItem[] = [
         title: "Presentation skills will be evaluated",
       },
     ],
+    prize: {
+      first: "₹ 20K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
   {
     title: "Startup Expo",
@@ -159,5 +201,11 @@ export const eventsData: EventItem[] = [
         title: "Bring your business cards",
       },
     ],
+    prize: {
+      first: "₹ 13K",
+      second: "₹ 5K",
+      third: "₹ 1K",
+      extra: ""
+    },
   },
 ];

@@ -11,20 +11,22 @@ interface EventCardProps {
 }
 
 const EventCard: React.FC<EventCardProps> = ({
-  item: { title, description, href, date, time, rules },
+  item: { title, description, href, date, time, rules, prize: { first: prize } },
   eventNumber
 }) => {
 
-  const {font, sub} = useFonts();
+  const {handwriting, sub} = useFonts();
 
   return (
     <div className='flex flex-col w-[90dvw] h-[90dvh] border-8 border-primary rounded-[2rem] p-8 overflow-clip event-card-shadow'>
-      <div className={`${sub.className} font-size-sm text-primary`}>PERCEPTRON 2025</div>
-      <div className={`${font.className} font-size-xs mt-2 text-slate-400`}>presents</div>
+      <div className="md:flex md:gap-4">
+        <div className={`${sub.className} font-size-sm text-primary`}>PERCEPTRON 2025</div>
+        <div className={`${handwriting.className} text-2xl leading-3 mt-2 font-light text-slate-400/50`}>presents</div>
+      </div>
       <div className={`${sub.className} font-size-lg mt-4 text-slate-300`}>{title}</div>
       <div className="flex-1 mt-4 grid grid-cols-[auto_2rem]">
         <div className="w-full h-full flex flex-col gap-6 overflow-hidden font-size-xs font-extralight">
-          <div className="text-lg leading-5">{description}</div>
+          <div className="leading-5 text-lg font-normal text-slate-400">{description}</div>
           <div className="flex flex-col gap-2">
             {rules.map((rule, i) => (
               <div key={i} className="flex items-center gap-2">
@@ -39,7 +41,7 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
           <div className="flex-1 flex items-center  gap-2">
             <Gift className="w-6 h-6 ml-2 text-primary" />
-            <p>Win Prizes worth <span className='text-primary font-bold'>$ 1M</span></p>
+            <p>Win Prizes worth <span className='text-primary font-bold'>{prize}</span></p>
           </div>
           <div className="space-y-2 text-right">
             <p>Event Will be held on</p>

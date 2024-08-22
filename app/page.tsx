@@ -25,7 +25,8 @@ export default function Home() {
   const { sub } = useFonts();
 
   const [videoPlaying, setVideoPlaying] = useState(false);
-
+  
+  const heroRef = useRef(null);
   const playIconRef = useRef(null);
   const bgRef = useRef(null);
 
@@ -39,7 +40,7 @@ export default function Home() {
       });
 
     },
-    { scope: "#hero", dependencies: [videoPlaying] }
+    { scope: heroRef, dependencies: [videoPlaying] }
   );
 
   return (
@@ -47,6 +48,7 @@ export default function Home() {
       <NavMenu />
       <section
         id="hero"
+        ref={heroRef}
         className="hero w-screen min-h-screen grid grid-rows-[80px_25dvh_1fr] md:grid-rows-[80px_30dvh_1fr] xl:grid-rows-[80px_1fr_280px]"
       >
         {/* <div ref={bgRef}> */}

@@ -80,6 +80,10 @@ html {
   @apply no-scrollbar;
 }
 
+.bg-video > div > video {
+  object-fit: cover !important;
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

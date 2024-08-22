@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 
 const About = () => {
-  const { main, font, sub, sub_cap } = useFonts();
+  const { main, font, serif_font, sub, sub_cap } = useFonts();
 
   const [about, setAbout] = useState<"RKMVERI" | "PERCEPTRON">("RKMVERI");
 
@@ -15,14 +15,14 @@ const About = () => {
 
   return (
     <div
-      className={`w-full h-full border-subtle !border-t-0 py-12 !border-b-0`}
+      className={`w-full h-full border-subtle max-md:border-0 !border-t-0 py-12 !border-b-0`}
     >
-      <div className="h-full border-subtle !border-l-0 !border-r-0">
+      <div className="h-full border-subtle max-md:border-0 !border-l-0 !border-r-0">
         <div
           className={`${font.className} h-[80vh] my-auto sm:h-full flex flex-col p-6 justify-center items-center`}
         >
           <div
-            className={`${sub_cap.className} font-size-sm tracking-[4rem] leading-[0px] flex flex-wrap items-center justify-center p-4 translate-x-[4%] text-slate-500`}
+            className={`${sub_cap.className} font-size-sm tracking-[2rem] md:tracking-[4rem] leading-[0px] flex flex-wrap items-center justify-center p-4 translate-x-[4%] text-slate-500`}
           >
             ABOUT
           </div>
@@ -32,13 +32,19 @@ const About = () => {
             {about}
           </div>
           <div className="flex flex-1 max-w-[1250px] sm:gap-4">
-            <div className="w-[5%] max-sm:hidden rounded-md mt-[18px] h-[3px] bg-primary"></div>
             <div className="flex flex-col flex-1">
-              <p className="text-ellipsis max-sm:px-10 font-size-sm text-justify sm:leading-10 flex-1 overflow-hidden text-slate-300">
-                {about == "RKMVERI" ? aboutRKMVERI : aboutPERCEPTRON}
-              </p>
+              <div className="flex gap-4">
+                <div className="w-[5%] max-sm:hidden rounded-md mt-[18px] h-[3px] bg-primary"></div>
+                <div className="flex flex-1 justify-center items-center">
+                  <p
+                    className={`${serif_font.className} text-ellipsis font-size-sm text-justify sm:leading-10 flex-1 overflow-hidden text-slate-300`}
+                  >
+                    {about == "RKMVERI" ? aboutRKMVERI : aboutPERCEPTRON}
+                  </p>
+                </div>
+              </div>
               <Button
-                className={`${sub.className} !text-lg mt-6 w-[320px]`}
+                className={`${sub.className} translate-x-[78px] !text-lg mt-6 w-[320px]`}
                 variant={"heroCTA"}
                 size={"responsiveXL"}
                 onClick={() =>

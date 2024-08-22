@@ -20,6 +20,9 @@ const NavMenu = () => {
 
   useGSAP(() => {
     tl.current = gsap.timeline({paused: true})
+    .set('.menu-bg-container', {
+      display: 'flex',
+    })
     .to('.menu-overlay', {
       duration: 0.25,
       height: '640px',
@@ -53,7 +56,7 @@ const NavMenu = () => {
     <div className="" ref={container}>
       <Button onClick={toggleMenu} variant={"ghostNoHover"} className={`${sub.className} xl:hidden fixed top-5 right-3 z-[100] text-background/50 text-xl`}>{isMenuOpen ? `Close` : `Menu`}</Button>
       <div className="menu-overlay xl:hidden menu-bg-glassmorphic border border-background/20 fixed top-4 right-3 h-12 w-[100px] rounded-2xl z-[90]" />
-      <div className={`${sub.className} xl:hidden fixed top-0 right-0 translate-x-[calc(-50vw+50%)] min-[425px]:translate-x-[-75px] translate-y-[10%] flex flex-col gap-6 items-start justify-center p-6 text-2xl text-gray-300 z-[95]`}>
+      <div className={`${sub.className} menu-bg-container xl:hidden fixed top-0 right-0 translate-x-[calc(-50vw+50%)] min-[425px]:translate-x-[-75px] translate-y-[10%] hidden flex-col gap-6 items-start justify-center p-6 text-2xl text-gray-300 z-[95]`}>
         {docsConfig.navbarItems.map((item, i) => (
           <div className="flex gap-2 items-end" key={i}>
             <p className={`${mono.className} nav-menu-links translate-y-[-1000px] text-primary text-sm opacity-0`}>0{i}</p>

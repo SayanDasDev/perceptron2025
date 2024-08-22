@@ -3,6 +3,7 @@ import About from "@/components/about";
 import BgVideo from "@/components/bg-video";
 import Events from "@/components/events";
 import EventsMobile from "@/components/events-mobile";
+import Gallery from "@/components/gallery";
 import HeroCardLeft from "@/components/hero-card-left";
 import HeroCardRight from "@/components/hero-card-right";
 import HeroTitle from "@/components/hero-title";
@@ -96,7 +97,7 @@ export default function Home() {
       </section>
       <section
         id="about"
-        className="about w-screen px-12 border-b-2 border-t-2 border-[#3a4150] !border-r-0 !border-l-0 h-screen flex items-center justify-center text-9xl bg-gradient-to-b from-black to-slate-900 text-white"
+        className="about w-screen px-12 border-b-2 border-t-2 border-[#3a4150] !border-r-0 !border-l-0  flex items-center justify-center text-9xl bg-gradient-to-b from-black to-slate-900 text-white"
       >
         <About />
       </section>
@@ -112,8 +113,8 @@ export default function Home() {
       </div>
 
       <Schedule />
-      <section id="gallery" className="w-screen h-screen bg-green-200 text-9xl">
-        gallery
+      <section id="gallery" className="w-screen h-screen text-9xl overflow-clip">
+        <Gallery />
       </section>
     </main>
   );

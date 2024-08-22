@@ -1,0 +1,18 @@
+.swiper_container {
+  height: 85%;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}

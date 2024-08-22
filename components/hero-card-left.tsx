@@ -3,17 +3,17 @@ import useFonts from "@/hooks/useFonts";
 
 const HeroCardLeft = () => {
 
-  const {font_sub_cap, font_sub, font} = useFonts()
+  const {sub_cap, sub, font} = useFonts()
 
   return (
       <div className="hero-card-left xl:h-[280px] bg-glassmorphic border-subtle flex flex-col justify-center !border-b-0 max-xl:!border-r-0 !border-l-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none xl:rounded-tl-none xl:rounded-tr-3xl text-center px-4">
         <p
-        className={`${font_sub.className} font-size-xs text-gray-400 font-extrabold`}
+        className={`${sub.className} font-size-xs text-gray-400 font-extrabold`}
       >
         Organized By
       </p>
       <p
-        className={`${font_sub_cap.className} font-size-sm pt-2 text-gray-50 font-extrabold`}
+        className={`${sub_cap.className} font-size-sm pt-2 text-gray-50 font-extrabold`}
       >
         Dept. of Computer Science
       </p>

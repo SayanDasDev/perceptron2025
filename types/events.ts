@@ -11,3 +11,8 @@ export interface EventRuleItem {
   title: string
   description?: string
 }
+
+export interface EventPrizeItem {
+  title: string
+  description?: string
+}

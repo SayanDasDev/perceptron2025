@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 
 const About = () => {
-  const { font_main, font, font_sub, font_sub_cap } = useFonts();
+  const { main, font, sub, sub_cap } = useFonts();
 
   const [about, setAbout] = useState<"RKMVERI" | "PERCEPTRON">("RKMVERI");
 
@@ -22,23 +22,23 @@ const About = () => {
           className={`${font.className} h-[80vh] my-auto sm:h-full flex flex-col p-6 justify-center items-center`}
         >
           <div
-            className={`${font_sub_cap.className} font-size-sm tracking-[4rem] leading-[0px] flex flex-wrap items-center justify-center p-4 translate-x-[4%] text-slate-500`}
+            className={`${sub_cap.className} font-size-sm tracking-[4rem] leading-[0px] flex flex-wrap items-center justify-center p-4 translate-x-[4%] text-slate-500`}
           >
             ABOUT
           </div>
           <div
-            className={`${font_main.className} font-size-lg flex flex-wrap items-center justify-start px-4 mb-6 text-green-400`}
+            className={`${main.className} font-size-lg flex flex-wrap items-center justify-start px-4 mb-6 text-primary`}
           >
             {about}
           </div>
           <div className="flex flex-1 max-w-[1250px] sm:gap-4">
-            <div className="w-[5%] max-sm:hidden rounded-md mt-[18px] h-[3px] bg-green-400"></div>
+            <div className="w-[5%] max-sm:hidden rounded-md mt-[18px] h-[3px] bg-primary"></div>
             <div className="flex flex-col flex-1">
               <p className="text-ellipsis max-sm:px-10 font-size-sm text-justify sm:leading-10 flex-1 overflow-hidden text-slate-300">
                 {about == "RKMVERI" ? aboutRKMVERI : aboutPERCEPTRON}
               </p>
               <Button
-                className={`${font_sub.className} !text-lg mt-6 w-[320px]`}
+                className={`${sub.className} !text-lg mt-6 w-[320px]`}
                 variant={"heroCTA"}
                 size={"responsiveXL"}
                 onClick={() =>

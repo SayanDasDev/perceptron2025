@@ -14,7 +14,7 @@ const EventsContents = () => {
           key={i}
           className="event h-screen w-screen flex items-center justify-center text-8xl bg-gradient-to-b from-slate-900 to-slate-950 text-white"
         >
-          <EventCard item={eventsData[i]} eventNumber={i}/>
+          <EventCard item={eventsData[i]} eventNumber={i+1}/>
         </div>
       ))}
     </>

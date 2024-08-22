@@ -3,10 +3,10 @@ import React from 'react'
 
 const Countdown = () => {
 
-  const { font_sub } = useFonts()
+  const { sub } = useFonts()
 
   return (
-    <div className={`${font_sub.className} text-gray-50 flex justify-around px-4 items-center`}>
+    <div className={`${sub.className} text-gray-50 flex justify-around px-4 items-center`}>
       <div className="flex flex-col text-center text-xs">
         <p className="text-2xl">199</p>
         <p className="">Days</p>

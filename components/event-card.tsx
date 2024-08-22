@@ -15,7 +15,7 @@ const EventCard: React.FC<EventCardProps> = ({
   eventNumber
 }) => {
 
-  const {handwriting, sub} = useFonts();
+  const {handwriting, sub, mono} = useFonts();
 
   return (
     <div className='flex flex-col w-[90dvw] h-[90dvh] border-8 border-primary rounded-[2rem] p-8 overflow-clip event-card-shadow'>
@@ -23,7 +23,7 @@ const EventCard: React.FC<EventCardProps> = ({
         <div className={`${sub.className} font-size-sm text-primary`}>PERCEPTRON 2025</div>
         <div className={`${handwriting.className} text-2xl leading-3 mt-2 font-light text-slate-400/50`}>presents</div>
       </div>
-      <div className={`${sub.className} font-size-lg mt-4 text-slate-300`}>{title}</div>
+      <div className={`${mono.className} uppercase font-size-lg mt-4 text-slate-300`}>{title}</div>
       <div className="flex-1 mt-4 grid grid-cols-[auto_2rem]">
         <div className="w-full h-full flex flex-col gap-6 overflow-hidden font-size-xs font-extralight">
           <div className="leading-5 text-lg font-normal text-slate-400">{description}</div>

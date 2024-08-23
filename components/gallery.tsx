@@ -19,7 +19,7 @@ const Gallery = () => {
 
 
   return (
-    <div className="text-slate-200 h-full">
+    <div className="text-slate-200 h-full space-y-4 sm:space-y-1">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -44,9 +44,20 @@ const Gallery = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex px-2 flex-col gap-4 md:items-end md:flex-row">
-        <p className={` font-size-lg`}>Gallery {activeIndex}</p>
-        <p className={`${sub.className} md:pb-3 text-primary/80 font-size-xs`}>{galleryData[activeIndex].title} </p>
+      <div className="flex px-2 flex-col md:items-end md:flex-row">
+        <p className={` font-size-lg`}>Gallery </p>
+        <div className={`bg-white h-2 flex-1 max-sm:hidden skew-x-[-45deg] relative`}>
+          <div className="absolute right-0 bottom-0 h-20 flex">
+            <div className={`bg-white w-2 h-full`}></div>
+            <div className={`bg-slate-950 w-8 h-full`}></div>
+            <div className={`bg-white w-8 h-full`}></div>
+            <div className={`bg-slate-950 w-8 h-full`}></div>
+            <div className={`bg-white w-8 h-full`}></div>
+            <div className={`bg-slate-950 w-8 h-full`}></div>
+            <div className={`bg-white w-8 h-full`}></div>
+            <div className={`bg-slate-950 w-8 h-full`}></div>
+          </div>
+        </div>
       </div>
     </div>
   );

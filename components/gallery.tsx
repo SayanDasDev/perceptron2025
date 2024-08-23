@@ -24,7 +24,7 @@ const Gallery = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}
+        loop={false}
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
@@ -34,7 +34,7 @@ const Gallery = () => {
         }}
         modules={[EffectCoverflow]}
         className="swiper_container"
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {galleryData.map((item, index) => (
           <SwiperSlide key={index}>
@@ -46,7 +46,7 @@ const Gallery = () => {
       </Swiper>
       <div className="flex px-2 flex-col gap-4 md:items-end md:flex-row">
         <p className={` font-size-lg`}>Gallery {activeIndex}</p>
-        <p className={`${sub.className} md:pb-3 text-primary/80 font-size-xs`}>{galleryData[activeIndex].description} </p>
+        <p className={`${sub.className} md:pb-3 text-primary/80 font-size-xs`}>{galleryData[activeIndex].title} </p>
       </div>
     </div>
   );

@@ -5,15 +5,14 @@ import { useGSAP } from "@gsap/react";
 import { ScheduleData } from "@/config/schedule";
 import ScheduleCard from "./schedule-card";
 import useFonts from "@/hooks/useFonts";
+import ScheduleCardMobile from "./schedule-card-mobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Schedule = () => {
   useGSAP(() => {
-    // Initial setup for schedule-content elements
-    gsap.set(".schedule-content:not(:first-child)", { opacity: 0, y: 50 });
+    gsap.set(".right-content:not(:first-child)", { opacity: 0, y: 50 });
 
-    // Create ScrollTriggers for each schedule title
     ScheduleData.forEach((_, i) => {
       ScrollTrigger.create({
         trigger: `.schedule-title:nth-child(${i + 1})`,
@@ -27,7 +26,6 @@ const Schedule = () => {
       });
     });
 
-    // Pin and scroll the right side content
     ScrollTrigger.create({
       trigger: ".schedule",
       start: "top top",
@@ -39,23 +37,20 @@ const Schedule = () => {
   });
 
   const handleTitleOpacity = (activeIndex: number) => {
-    // Set opacity and scale of all titles to 0.5
-    gsap.to(".left div", {
+    gsap.to(".left .left-content", {
       opacity: 0.5,
       scaleX: 0.9,
       duration: 0.5,
     });
 
-    // Set opacity and scale of the active title to 1
-    gsap.to(`.left div:nth-child(${activeIndex + 1})`, {
+    gsap.to(`.left .left-content:nth-child(${activeIndex + 1})`, {
       opacity: 1,
       scaleX: 1,
       x: "10%",
       duration: 0.5,
     });
 
-    // Animate the corresponding schedule content
-    gsap.to(`.schedule-content:nth-child(${activeIndex + 1})`, {
+    gsap.to(`.right-content:nth-child(${activeIndex + 1})`, {
       opacity: 1,
       y: 0,
       stagger: 0.5,
@@ -64,8 +59,7 @@ const Schedule = () => {
   };
 
   const resetTitleOpacity = (index: number) => {
-    // Reset the schedule content when it leaves the viewport
-    gsap.to(`.schedule-content:nth-child(${index + 1})`, {
+    gsap.to(`.right-content:nth-child(${index + 1})`, {
       opacity: 0,
       y: 50,
       ease: "power2.inOut",
@@ -81,8 +75,9 @@ const Schedule = () => {
     >
       <div className="left max-sm:w-full w-1/2 pt-[25%] pb-[15%] px-6 font-size-md">
         {ScheduleData.map((data, index) => (
-          <div key={index} className={`${mono.className} h-[25dvh] schedule-title text-left`}>
-            {data.title}
+          <div key={index} className={`${mono.className} left-content h-[25dvh] schedule-title text-left`}>
+            <p className="max-sm:hidden">{data.title}</p>
+            <ScheduleCardMobile data={data} />
           </div>
         ))}
       </div>
@@ -90,9 +85,9 @@ const Schedule = () => {
         {ScheduleData.map((data, i) => (
           <div
             key={i}
-            className="schedule-content absolute w-[40dvw] h-[75dvh] bg-gradient-to-bl from-gray-900 to-gray-950 border-8 border-primary rounded-[2rem] p-8 overflow-clip event-card-shadow"
+            className="right-content absolute w-[40dvw] h-[75dvh] bg-gradient-to-bl from-gray-900 to-gray-950 border-8 border-primary rounded-[2rem] p-8 overflow-clip event-card-shadow"
           >
-            <ScheduleCard data={ScheduleData[i]} />
+            <ScheduleCard data={data} />
           </div>
         ))}
       </div>

@@ -113,7 +113,7 @@ export default function Home() {
       </div>
 
       <Schedule />
-      <section id="gallery" className="w-screen h-screen text-9xl overflow-clip">
+      <section id="gallery" className="w-screen h-screen text-9xl bg-slate-950 overflow-clip">
         <Gallery />
       </section>
     </main>

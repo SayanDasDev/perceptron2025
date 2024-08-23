@@ -5,8 +5,7 @@ export const eventsData: EventItem[] = [
     title: "Stragtegem",
     description: "Case Study Competition",
     href: "www.google.com",
-    date: "25th Sep '21",
-    time: "09:00 AM",
+    dateTime: new Date("2021-09-25T09:00:00"),
     rules: [
       {
         title: "Individual Participation",
@@ -29,8 +28,7 @@ export const eventsData: EventItem[] = [
     title: "Hack-a-thon",
     description: "24-hour coding challenge",
     href: "www.techfest.com/hackathon",
-    date: "12th Oct '21",
-    time: "05:00 PM",
+    dateTime: new Date("2021-10-12T17:00:00"),
     rules: [
       {
         title: "Team of 3-5 members",
@@ -56,8 +54,7 @@ export const eventsData: EventItem[] = [
     title: "Tech Talks",
     description: "Lectures by industry experts",
     href: "www.techfest.com/talks",
-    date: "18th Oct '21",
-    time: "11:00 AM",
+    dateTime: new Date("2021-10-18T11:00:00"),
     rules: [
       {
         title: "Open to all",
@@ -80,8 +77,7 @@ export const eventsData: EventItem[] = [
     title: "Robotic Challenge",
     description: "Design and build autonomous robots",
     href: "www.techfest.com/robotics",
-    date: "3rd Nov '21",
-    time: "02:00 PM",
+    dateTime: new Date("2021-11-03T14:00:00"),
     rules: [
       {
         title: "Team of 2-4 members",
@@ -110,8 +106,7 @@ export const eventsData: EventItem[] = [
     title: "Ideathon",
     description: "Pitch your innovative ideas",
     href: "www.techfest.com/ideathon",
-    date: "15th Nov '21",
-    time: "10:00 AM",
+    dateTime: new Date("2021-11-15T10:00:00"),
     rules: [
       {
         title: "Individual or Team of 2",
@@ -134,8 +129,7 @@ export const eventsData: EventItem[] = [
     title: "AI/ML Workshop",
     description: "Hands-on training in AI and ML",
     href: "www.techfest.com/aiml",
-    date: "22nd Nov '21",
-    time: "01:00 PM",
+    dateTime: new Date("2021-11-22T13:00:00"),
     rules: [
       {
         title: "Limited seats",
@@ -158,8 +152,7 @@ export const eventsData: EventItem[] = [
     title: "Poster Presentation",
     description: "Showcase your research or projects",
     href: "www.techfest.com/posters",
-    date: "1st Dec '21",
-    time: "03:00 PM",
+    dateTime: new Date("2021-12-01T15:00:00"),
     rules: [
       {
         title: "Individual or Team of 2",
@@ -188,8 +181,7 @@ export const eventsData: EventItem[] = [
     title: "Startup Expo",
     description: "Explore and network with startups",
     href: "www.techfest.com/startups",
-    date: "7th Dec '21",
-    time: "04:00 PM",
+    dateTime: new Date("2021-12-07T16:00:00"),
     rules: [
       {
         title: "Open to all",

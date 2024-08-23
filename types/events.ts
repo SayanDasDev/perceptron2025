@@ -2,8 +2,7 @@ export interface EventItem {
   title: string
   description: string
   href: string
-  date: string
-  time: string
+  dateTime: Date
   rules: EventRuleItem[]
   prize: EventPrizeItem
 }

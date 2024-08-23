@@ -3,32 +3,80 @@ import { ScheduleItem } from "@/types/schedule";
 export const ScheduleData: ScheduleItem[] = [
   {
     title: "Registration Opens",
-    startDate: "31st Feb, 2025",
-    startTime: "29:00 AM",
+    description: "Kickstart your journey by registering for the event.",
+    start: new Date("2025-02-28T05:00:00"),
+    status: 'closed',
+    venue: "Main Hall, Building A",
   },
   {
     title: "Registration Closes",
-    startDate: "31st Feb, 2024",
-    startTime: "28:00 AM"
+    description: "Last chance to register for the event. Don't miss out!",
+    start: new Date("2024-02-28T04:00:00"),
+    end: new Date("2024-02-28T06:00:00"),
+    status: 'ongoing',
+    venue: "Main Hall, Building A",
   },
   {
-    title: "Event1 Starts",
-    startDate: "31st Feb, 2023",
-    startTime: "27:00 AM"
+    title: "Opening Ceremony",
+    description: "Join us for the grand opening ceremony with keynote speakers.",
+    start: new Date("2023-02-28T09:00:00"),
+    end: new Date("2023-02-28T10:00:00"),
+    status: 'closed',
+    venue: "Auditorium, Building B",
   },
   {
-    title: "Event2 Ends",
-    startDate: "31st Feb, 2022",
-    startTime: "26:00 AM"
+    title: "Tech Talk: AI in 2025",
+    description: "Explore the future of AI with industry experts.",
+    start: new Date("2023-02-28T11:00:00"),
+    end: new Date("2023-02-28T12:00:00"),
+    status: 'closed',
+    venue: "Lecture Hall 1, Building C",
   },
   {
-    title: "Event3 Starts",
-    startDate: "31st Feb, 2021",
-    startTime: "25:00 AM"
+    title: "Workshop: Machine Learning Basics",
+    description: "Hands-on workshop to get you started with machine learning.",
+    start: new Date("2023-02-28T13:00:00"),
+    end: new Date("2023-02-28T15:00:00"),
+    status: 'closed',
+    venue: "Lab 2, Building D",
   },
   {
-    title: "Event4 Ends",
-    startDate: "31st Feb, 2020",
-    startTime: "24:00 AM"
+    title: "Networking Lunch",
+    description: "Connect with fellow participants over lunch.",
+    start: new Date("2023-02-28T12:00:00"),
+    end: new Date("2023-02-28T13:00:00"),
+    status: 'closed',
+    venue: "Cafeteria, Building E",
+  },
+  {
+    title: "Panel Discussion: Future of Tech",
+    description: "Panel discussion with tech leaders on the future of technology.",
+    start: new Date("2023-02-28T15:00:00"),
+    end: new Date("2023-02-28T16:00:00"),
+    status: 'closed',
+    venue: "Conference Room, Building F",
+  },
+  {
+    title: "Hackathon Begins",
+    description: "24-hour hackathon to solve real-world problems.",
+    start: new Date("2023-02-28T17:00:00"),
+    status: 'ongoing',
+    venue: "Innovation Hub, Building G",
+  },
+  {
+    title: "Hackathon Ends",
+    description: "Submit your projects and get ready for the presentations.",
+    start: new Date("2023-03-01T17:00:00"),
+    end: new Date("2023-03-01T18:00:00"),
+    status: 'upcoming',
+    venue: "Innovation Hub, Building G",
+  },
+  {
+    title: "Closing Ceremony",
+    description: "Celebrate the end of the event with awards and closing remarks.",
+    start: new Date("2023-03-01T19:00:00"),
+    end: new Date("2023-03-01T20:00:00"),
+    status: 'upcoming',
+    venue: "Auditorium, Building B",
   }
-]
+];

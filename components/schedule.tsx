@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ScheduleData } from "@/config/schedule";
 import ScheduleCard from "./schedule-card";
+import useFonts from "@/hooks/useFonts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,14 +72,16 @@ const Schedule = () => {
     });
   };
 
+  const {mono} = useFonts();
+
   return (
     <section
       id="schedule"
       className="schedule w-screen overflow-y-clip bg-slate-950 text-slate-300 text-9xl flex"
     >
-      <div className="left w-1/2 pt-[25%] pb-[15%] px-6 font-size-md">
+      <div className="left max-sm:w-full w-1/2 pt-[25%] pb-[15%] px-6 font-size-md">
         {ScheduleData.map((data, index) => (
-          <div key={index} className="h-[25dvh] schedule-title text-left">
+          <div key={index} className={`${mono.className} h-[25dvh] schedule-title text-left`}>
             {data.title}
           </div>
         ))}

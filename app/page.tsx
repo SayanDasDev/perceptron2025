@@ -74,7 +74,7 @@ export default function Home() {
         </div>
         <div className="grid hero-cards-grid">
           <HeroCardLeft />
-          <div className="flex flex-col-reverse col-span-1 md:col-span-2 xl:col-span-3 xl:flex-col gap-6 items-center justify-center mx-auto">
+          <div className="hero-cta flex flex-col-reverse col-span-1 md:col-span-2 xl:col-span-1 xl:flex-col gap-6 items-center justify-center mx-auto">
             <Button
               className={`${sub.className} xl:translate-y-[-150%]`}
               variant={"heroCTA"}

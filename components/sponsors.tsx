@@ -1,16 +1,21 @@
+import { cn } from "@/lib/utils";
 import SectionWrapper from "./section-wrapper";
+import useFonts from "@/hooks/useFonts";
 
 const Sponsors = () => {
+
+  const {mono} = useFonts();
+
   return (
     <SectionWrapper
       name="sponsors"
       className="flex flex-col justify-center items-center gap-4"
     >
-      <div className="w-full text-primary-foreground/80 text-xl tracking-widest font-bold">
-        SPONSORS
+      <div className={cn("text-8xl uppercase tracking-widest text-center text-primary", mono.className)}>
+        Sponsors
       </div>
-      <div className="w-full text-primary text-4xl tracking-wide">
-        Supporting our venture
+      <div className="text-xl text-center text-primary-foreground">
+        Supporting Our Ventures
       </div>
       <div className="grid md:grid-cols-4 gap-8 w-full pt-8 xl:px-8">
         {Array.from({ length: 6 }).map((_, i) => (

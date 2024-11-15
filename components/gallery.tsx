@@ -13,7 +13,7 @@ import useFonts from "@/hooks/useFonts";
 
 const Gallery = () => {
 
-  const { sub, } = useFonts();
+  const { sub, mono } = useFonts();
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -45,7 +45,7 @@ const Gallery = () => {
         ))}
       </Swiper>
       <div className="flex px-2 flex-col md:items-end md:flex-row">
-        <p className={` font-size-lg`}>Gallery </p>
+        <p className={` font-size-lg ${mono.className}`}>Gallery </p>
         <div className={`bg-primary h-2 flex-1 max-sm:hidden skew-x-[-45deg] relative`}>
           <div className="absolute right-0 bottom-0 h-20 flex">
             <div className={`bg-primary w-2 h-full`}></div>

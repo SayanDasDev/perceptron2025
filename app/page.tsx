@@ -21,6 +21,7 @@ import { Pause, Play } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import FAQs from "@/components/faqs";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,8 @@ export default function Home() {
     },
     { scope: heroRef, dependencies: [videoPlaying] }
   );
+
+  const { mono } = useFonts();
 
   return (
     <main className="overflow-x-hidden">
@@ -115,6 +118,7 @@ export default function Home() {
       </div>
 
       <Sponsors />
+      <div className={cn("bg-slate-950 text-8xl text-center text-primary", mono.className)}>Our Team</div>
       <Team />
       <section id="gallery" className="w-screen h-screen text-9xl bg-slate-950 overflow-clip">
         <Gallery />

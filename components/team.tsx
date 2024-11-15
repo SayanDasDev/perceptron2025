@@ -5,6 +5,8 @@ import useFonts from "@/hooks/useFonts";
 import { TeamData } from "@/config/team";
 import TeamCard from "./team-card";
 import TeamCardMobile from "./team-card-mobile";
+import { cn } from "@/lib/utils";
+import { Badge } from "./ui/badge";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +69,7 @@ const Team = () => {
     });
   };
 
-  const {mono} = useFonts();
+  const {mono, font} = useFonts();
 
   return (
     <section
@@ -78,6 +80,7 @@ const Team = () => {
         {TeamData.map((data, index) => (
           <div key={index} className={`${mono.className} left-content h-[25dvh] team-title text-left`}>
             <p className="max-sm:hidden">{data.name}</p>
+            <Badge className={cn("max-sm:hidden text-lg bg-primary-foreground/20 font-normal", font.className)}>{data.role}</Badge>
             <TeamCardMobile data={data} />
           </div>
         ))}

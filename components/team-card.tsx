@@ -21,9 +21,9 @@ const TeamCard: React.FC<TeamCardProps> = ({
         <AvatarFallback className="bg-transparent"></AvatarFallback>
       </Avatar>
 
-      <div className="h-fit w-fit flex flex-col p-4 gap-2 text-center bg-green-400 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-green-400">
+      {/* <div className="h-fit w-fit flex flex-col p-4 gap-2 text-center bg-primary/20 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm border-green-400">
         <p className="font-size-sm font-bold">{role}</p>
-      </div>
+      </div> */}
       <div className="flex-1"></div>
       <div className="grid grid-cols-3 gap-4">
         {github && (

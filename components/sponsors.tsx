@@ -12,7 +12,7 @@ const Sponsors = () => {
       <div className="w-full text-primary text-4xl tracking-wide">
         Supporting our venture
       </div>
-      <div className="grid grid-cols-4 gap-8 w-full pt-8 xl:px-8">
+      <div className="grid md:grid-cols-4 gap-8 w-full pt-8 xl:px-8">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}

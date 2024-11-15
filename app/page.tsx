@@ -11,6 +11,7 @@ import { Logos } from "@/components/logos";
 import NavMenu from "@/components/nav-menu";
 import Navbar from "@/components/navbar";
 import Schedule from "@/components/schedule";
+import Sponsors from "@/components/sponsors";
 import { Button } from "@/components/ui/button";
 import useFonts from "@/hooks/useFonts";
 import { useGSAP } from "@gsap/react";
@@ -112,6 +113,7 @@ export default function Home() {
         <EventsMobile />
       </div>
 
+      <Sponsors />
       <Schedule />
       <section id="gallery" className="w-screen h-screen text-9xl bg-slate-950 overflow-clip">
         <Gallery />

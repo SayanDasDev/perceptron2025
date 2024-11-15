@@ -20,6 +20,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Pause, Play } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import FAQs from "@/components/faqs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,6 +119,7 @@ export default function Home() {
       <section id="gallery" className="w-screen h-screen text-9xl bg-slate-950 overflow-clip">
         <Gallery />
       </section>
+      <FAQs />
     </main>
   );
 }

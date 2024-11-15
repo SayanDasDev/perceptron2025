@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 const About = () => {
   const { main, font, serif_font, sub, sub_cap } = useFonts();
 
-  const [about, setAbout] = useState<"RKMVERI" | "PERCEPTRON">("RKMVERI");
+  const [about, setAbout] = useState<"RKMVERI" | "PERCEPTRON">("PERCEPTRON");
 
   const aboutRKMVERI =
     "Ramakrishna Mission Vivekananda Educational and Research Institute (RKMVERI) is a Deemed-to-be-University as declared by Govt. of India under Section 3 of UGC Act, 1956. The Institute is inspired by the teachings of Swami Vivekananda who believed that education is the manifestation of perfection already. The Institute is a leading educational institution in the country with a strong commitment to excellence in education and research. The Institute offers a wide range of programs in the field of arts, science, engineering, management, and law. The Institute is known for its high-quality education, research, and innovation. The Institute is committed to providing a conducive environment for the holistic development of students and faculty. The Institute is dedicated to the promotion of knowledge, wisdom, and service to society.";

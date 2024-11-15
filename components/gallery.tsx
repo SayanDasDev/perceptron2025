@@ -46,15 +46,15 @@ const Gallery = () => {
       </Swiper>
       <div className="flex px-2 flex-col md:items-end md:flex-row">
         <p className={` font-size-lg`}>Gallery </p>
-        <div className={`bg-white h-2 flex-1 max-sm:hidden skew-x-[-45deg] relative`}>
+        <div className={`bg-primary h-2 flex-1 max-sm:hidden skew-x-[-45deg] relative`}>
           <div className="absolute right-0 bottom-0 h-20 flex">
-            <div className={`bg-white w-2 h-full`}></div>
+            <div className={`bg-primary w-2 h-full`}></div>
             <div className={`bg-slate-950 w-8 h-full`}></div>
-            <div className={`bg-white w-8 h-full`}></div>
+            <div className={`bg-primary w-8 h-full`}></div>
             <div className={`bg-slate-950 w-8 h-full`}></div>
-            <div className={`bg-white w-8 h-full`}></div>
+            <div className={`bg-primary w-8 h-full`}></div>
             <div className={`bg-slate-950 w-8 h-full`}></div>
-            <div className={`bg-white w-8 h-full`}></div>
+            <div className={`bg-primary w-8 h-full`}></div>
             <div className={`bg-slate-950 w-8 h-full`}></div>
           </div>
         </div>

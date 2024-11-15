@@ -1,21 +1,20 @@
-import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ScheduleData } from "@/config/schedule";
-import ScheduleCard from "./schedule-card";
 import useFonts from "@/hooks/useFonts";
-import ScheduleCardMobile from "./schedule-card-mobile";
+import { TeamData } from "@/config/team";
+import TeamCard from "./team-card";
+import TeamCardMobile from "./team-card-mobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Schedule = () => {
+const Team = () => {
   useGSAP(() => {
     gsap.set(".right-content:not(:first-child)", { opacity: 0, y: 50 });
 
-    ScheduleData.forEach((_, i) => {
+    TeamData.forEach((_, i) => {
       ScrollTrigger.create({
-        trigger: `.schedule-title:nth-child(${i + 1})`,
+        trigger: `.team-title:nth-child(${i + 1})`,
         start: "top center",
         end: "bottom center",
         onEnter: () => handleTitleOpacity(i),
@@ -27,7 +26,7 @@ const Schedule = () => {
     });
 
     ScrollTrigger.create({
-      trigger: ".schedule",
+      trigger: ".team",
       start: "top top",
       end: "bottom bottom",
       pin: ".right",
@@ -53,6 +52,7 @@ const Schedule = () => {
     gsap.to(`.right-content:nth-child(${activeIndex + 1})`, {
       opacity: 1,
       y: 0,
+      zIndex: 100,
       stagger: 0.5,
       ease: "power2.inOut",
     });
@@ -62,6 +62,7 @@ const Schedule = () => {
     gsap.to(`.right-content:nth-child(${index + 1})`, {
       opacity: 0,
       y: 50,
+      zIndex: -100,
       ease: "power2.inOut",
     });
   };
@@ -70,24 +71,24 @@ const Schedule = () => {
 
   return (
     <section
-      id="schedule"
-      className="schedule w-screen overflow-y-clip bg-slate-950 text-slate-300 text-9xl flex"
+      id="team"
+      className="team w-screen overflow-y-clip bg-slate-950 text-slate-300 text-9xl flex"
     >
       <div className="left max-sm:w-full w-1/2 pt-[25%] pb-[15%] px-6 font-size-md">
-        {ScheduleData.map((data, index) => (
-          <div key={index} className={`${mono.className} left-content h-[25dvh] schedule-title text-left`}>
-            <p className="max-sm:hidden">{data.title}</p>
-            <ScheduleCardMobile data={data} />
+        {TeamData.map((data, index) => (
+          <div key={index} className={`${mono.className} left-content h-[25dvh] team-title text-left`}>
+            <p className="max-sm:hidden">{data.name}</p>
+            <TeamCardMobile data={data} />
           </div>
         ))}
       </div>
       <div className="right relative max-sm:hidden h-dvh w-1/2 flex items-center justify-center">
-        {ScheduleData.map((data, i) => (
+        {TeamData.map((data, i) => (
           <div
             key={i}
             className="right-content absolute w-[40dvw] h-[75dvh] bg-gradient-to-bl from-gray-900 to-gray-950 border-8 border-primary rounded-[2rem] p-8 overflow-clip event-card-shadow"
           >
-            <ScheduleCard data={data} />
+            <TeamCard data={data} />
           </div>
         ))}
       </div>
@@ -95,4 +96,4 @@ const Schedule = () => {
   );
 };
 
-export default Schedule;
+export default Team;

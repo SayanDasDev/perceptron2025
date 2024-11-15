@@ -10,7 +10,7 @@ import HeroTitle from "@/components/hero-title";
 import { Logos } from "@/components/logos";
 import NavMenu from "@/components/nav-menu";
 import Navbar from "@/components/navbar";
-import Schedule from "@/components/schedule";
+import Team from "@/components/team";
 import Sponsors from "@/components/sponsors";
 import { Button } from "@/components/ui/button";
 import useFonts from "@/hooks/useFonts";
@@ -114,7 +114,7 @@ export default function Home() {
       </div>
 
       <Sponsors />
-      <Schedule />
+      <Team />
       <section id="gallery" className="w-screen h-screen text-9xl bg-slate-950 overflow-clip">
         <Gallery />
       </section>

@@ -1,4 +1,3 @@
-import React from "react";
 import SectionWrapper from "./section-wrapper";
 
 const Sponsors = () => {

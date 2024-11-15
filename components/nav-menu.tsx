@@ -24,7 +24,7 @@ const NavMenu = () => {
       display: 'flex',
     })
     .to('.menu-overlay', {
-      duration: 0.25,
+      duration: 0.15,
       height: '640px',
       maxWidth: '300px',
       width: 'calc(100vw - 24px)',
@@ -32,10 +32,10 @@ const NavMenu = () => {
     })
     .set('.nav-menu-links', {y: 20})
     .to('.nav-menu-links', {
-      duration: 0.4,
+      duration: 0.04,
       y: 0,
       opacity: 1,
-      stagger: 0.05,
+      stagger: 0.015,
       ease: 'elastic.inOut',
     })
   }, {scope: container})

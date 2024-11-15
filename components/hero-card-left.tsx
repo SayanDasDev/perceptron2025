@@ -6,7 +6,7 @@ const HeroCardLeft = () => {
   const {sub_cap, sub, font} = useFonts()
 
   return (
-      <div className="hero-card-left xl:h-[280px] bg-glassmorphic border-subtle flex flex-col justify-center !border-b-0 max-xl:!border-r-0 !border-l-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none xl:rounded-tl-none xl:rounded-tr-3xl text-center px-4">
+      <div className="hero-card-left xl:h-[280px] bg-glassmorphic border-subtle flex flex-col justify-center !border-b-0 max-xl:!border-r-0 !border-l-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none xl:rounded-tl-none xl:rounded-tr-3xl text-center px-4 md:hidden">
         <p
         className={`${sub.className} font-size-xs text-gray-400 font-extrabold`}
       >

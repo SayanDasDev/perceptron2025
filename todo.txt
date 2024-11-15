@@ -1,0 +1,12 @@
+- hero
+- about
+- Events
+- Sponsor
+- Team 
+- Gallery
+- FAQ
+- Contact
+- venue
+- nav menu is too slow in mobile
+- gallery should loop
+- event date 10-11 jan

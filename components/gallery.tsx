@@ -24,7 +24,7 @@ const Gallery = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        loop={false}
+        loop={true}
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
